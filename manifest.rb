@@ -10,7 +10,7 @@ class Manifest
     loop do
 
       puts "\n"
-      puts "You have #{employees.size.to_s} in the manifest.\n"
+      puts "You have #{@employees.size.to_s} in the manifest.\n"
       puts "1: Add an Employee"
       puts "2: Remove an Employee"
       puts "3: List all Employees"
@@ -30,6 +30,7 @@ class Manifest
         break
       else
         puts "Invalid Input"
+      end
     end
   end
 
@@ -51,7 +52,7 @@ class Manifest
 
   def print_manifest
     puts "Employee Manifest:"
-    @employees.each |employee| do
+    @employees.each do |employee|
       puts employee
     end
   end
