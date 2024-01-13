@@ -42,7 +42,9 @@ class Manifest
     print "Enter the Employee's position: "
     position = gets.chomp
     id = rand(1000..9999).to_s
-    
+    while @employees.any? {|employee| employee.id == id}
+      id = rand(1000..9999).to_s
+    end
     @employees.push(Employee.new(name,position,id))
     puts "Employee Added Succesfully!"
   end
@@ -60,9 +62,16 @@ class Manifest
   end
 
   def print_manifest
-    puts "\nEmployee Manifest:"
-    @employees.each do |employee|
-      puts employee
+
+    if @employees.size == 0
+      puts "\nManifest is Empty!\n"
+    else
+      puts "\n--------------------\n"
+      puts "\nEmployee Manifest:\n"
+      @employees.each do |employee|
+        puts employee
+      end
+      puts "\n--------------------\n"
     end
   end
 
