@@ -1,5 +1,5 @@
-# ruby-cli-template
+# Employee Manifest
+A command line interface app to simulate an employee manifest for a company.
 
-Use this repository as a template for your Ruby CLI (command line interface) project.
-
-- Ruby version: `3.2.1`
+## Usage
+Run `ruby app.rb` in terminal
