@@ -48,7 +48,15 @@ class Manifest
   end
 
   def delete_employee
-
+    print "\nWhat is the id of the employee: "
+    id = gets.chomp.to_s
+    index = @employees.index {|employee| employee.id == id}
+    if index
+      @employees.delete_at(index)
+      puts "Employee Deleted Succesfully\n"
+    else
+      puts "No employee found with id: #{id}"
+    end
   end
 
   def print_manifest
