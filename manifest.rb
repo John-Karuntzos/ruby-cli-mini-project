@@ -37,12 +37,13 @@ class Manifest
   private
 
   def add_employee
-    print "Enter the Employee's name: "
+    print "\nEnter the Employee's name: "
     name = gets.chomp
     print "Enter the Employee's position: "
     position = gets.chomp
     id = rand(1000..9999).to_s
-    @employees.push(new Employee(name,position,id))
+    
+    @employees.push(Employee.new(name,position,id))
     puts "Employee Added Succesfully!"
   end
 
@@ -51,7 +52,7 @@ class Manifest
   end
 
   def print_manifest
-    puts "Employee Manifest:"
+    puts "\nEmployee Manifest:"
     @employees.each do |employee|
       puts employee
     end
