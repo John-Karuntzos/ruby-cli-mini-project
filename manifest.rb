@@ -6,6 +6,10 @@ class Manifest
     @employees = []
   end
 
+  def get_employees
+    return @employees
+  end
+
   def run
     loop do
 
